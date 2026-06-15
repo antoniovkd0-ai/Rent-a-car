@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>By Drive - Preview</title>
+  <link rel="stylesheet" href="out.css">
+  <style>
+    /* Inline CSS for variables to ensure they work */
+    :root {
+      --background: #050509;
+      --surface: #0A0A0F;
+      --primary: #ffffff;
+      --secondary: #B5B5C0;
+      --accent: #32E875;
+      --alert: #FF3B4E;
+    }
+    body {
+      background-color: var(--background);
+      color: var(--primary);
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+    }
+    .pill {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+    }
+    /* Fallback image backgrounds for offline preview */
+    .hero-bg {
+      background: linear-gradient(to bottom, transparent, #050509), 
+                  linear-gradient(45deg, #111, #222);
+    }
+    .car-bg {
+      background-color: #1a1a24;
+    }
+  </style>
+</head>
+<body class="bg-[#050509] text-white min-h-screen flex flex-col overflow-x-hidden">
+  
+  <nav class="w-full border-b border-white/5 py-4 bg-[#050509]">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="text-2xl font-bold tracking-tighter text-white">
+        By <span class="text-[#32E875]">Drive</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#" class="text-sm font-medium text-[#B5B5C0]">Carros</a>
+        <a href="#" class="text-sm font-medium text-[#B5B5C0]">Como Funciona</a>
+        <a href="#" class="text-sm font-medium text-[#B5B5C0]">Termos</a>
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="#" class="bg-white text-[#050509] px-6 py-2.5 rounded-full font-semibold">
+          Reservar Agora
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative min-h-[80vh] flex items-center justify-center pt-16 overflow-hidden hero-bg">
+    <div class="relative z-20 max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between">
+      <div class="flex-1 text-left">
+        <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8">
+          <span class="text-xs font-medium text-gray-300">Escolhido por +250 clientes em Luanda</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+          Aluguer de Carros <br/>
+          <span class="text-[#32E875]">Premium</span> em Luanda
+        </h1>
+        <p class="text-lg md:text-xl text-[#B5B5C0] mb-10 max-w-lg">
+          Experiência 100% digital, pagamentos por Multicaixa Express e gestão sem complicações.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="#" class="bg-white text-[#050509] px-8 py-4 rounded-full font-bold text-lg text-center">
+            Escolher o meu carro
+          </a>
+          <a href="#" class="px-8 py-4 rounded-full font-bold text-lg text-white border border-white/10 text-center">
+            Como Funciona
+          </a>
+        </div>
+      </div>
+      
+      <div class="flex-1 mt-16 md:mt-0 relative w-full">
+        <div class="w-full h-[400px] bg-gradient-to-br from-white/5 to-transparent rounded-[2rem] border border-white/10 flex items-center justify-center relative overflow-hidden">
+           <div class="text-[#B5B5C0] text-sm">Imagem do Veículo (Offline Preview)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">A nossa frota</h2>
+        <p class="text-[#B5B5C0] text-lg">Veículos inspecionados, limpos e prontos para a estrada.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-[#0A0A0F] border border-white/5 rounded-[1.5rem] overflow-hidden flex flex-col">
+        <div class="relative h-56 w-full car-bg p-4 flex justify-between items-start">
+          <span class="pill px-3 py-1 text-xs font-semibold rounded-full text-white">LUXO</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-white mb-1">Toyota Land Cruiser 300</h3>
+          <p class="text-[#B5B5C0] text-sm mb-4">desde <span class="text-white font-semibold">120.000 AOA</span> / dia</p>
+          <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">Automático</span>
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">AC</span>
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">7 lugares</span>
+          </div>
+          <a href="#" class="w-full block text-center bg-white/5 text-white border border-white/10 py-3 rounded-full font-semibold">Ver detalhes</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#0A0A0F] border border-white/5 rounded-[1.5rem] overflow-hidden flex flex-col">
+        <div class="relative h-56 w-full car-bg p-4 flex justify-between items-start">
+          <span class="pill px-3 py-1 text-xs font-semibold rounded-full text-white">SUV</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-white mb-1">Kia Sportage</h3>
+          <p class="text-[#B5B5C0] text-sm mb-4">desde <span class="text-white font-semibold">45.000 AOA</span> / dia</p>
+          <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">Automático</span>
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">AC</span>
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">5 lugares</span>
+          </div>
+          <a href="#" class="w-full block text-center bg-white/5 text-white border border-white/10 py-3 rounded-full font-semibold">Ver detalhes</a>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="bg-[#0A0A0F] border border-white/5 rounded-[1.5rem] overflow-hidden flex flex-col">
+        <div class="relative h-56 w-full car-bg p-4 flex justify-between items-start">
+          <span class="pill px-3 py-1 text-xs font-semibold rounded-full text-white">SUV</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-white mb-1">Hyundai Tucson</h3>
+          <p class="text-[#B5B5C0] text-sm mb-4">desde <span class="text-white font-semibold">42.000 AOA</span> / dia</p>
+          <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">Automático</span>
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">AC</span>
+            <span class="bg-black/40 border border-white/5 px-3 py-1 rounded-full text-xs text-gray-300">5 lugares</span>
+          </div>
+          <a href="#" class="w-full block text-center bg-white/5 text-white border border-white/10 py-3 rounded-full font-semibold">Ver detalhes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#050509] border-t border-white/5 pt-12 pb-6 text-center text-[#B5B5C0] text-sm">
+    <p>© 2026 By Drive. Todos os direitos reservados. Luanda, Angola.</p>
+  </footer>
+
+</body>
+</html>
